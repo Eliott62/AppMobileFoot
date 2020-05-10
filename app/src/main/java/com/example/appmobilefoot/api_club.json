@@ -1,0 +1,162 @@
+[
+        {
+        "name" : "Amiens AC",
+        "imageURL" : "https://cdn.bein.net/fr/wp-content/uploads/2019/07/Logo-Amiens-SC.png",
+        "stadium" : "Stade de la Licorne",
+        "coach" : "Luka Elsner",
+        "president" : "Bernard Joanin",
+        "creation" : "1901"
+        },
+        {
+        "name" : "Angers SCO",
+        "imageURL" : "https://cdn.bein.net/fr/wp-content/uploads/2019/07/Logo-Angers-SCO.png",
+        "stadium" : "Stade Jean Bouin",
+        "coach" : "Stephane Moulin",
+        "president" : "Saïd Chabane",
+        "creation" : "1919"
+        },
+        {
+        "name" : "Girondins de Bordeaux",
+        "imageURL" : "https://cdn.bein.net/fr/wp-content/uploads/2019/07/Logo-Girondins-de-Bordeaux.png",
+        "stadium" : "Matmut Atlantique",
+        "coach" : "Paulo Sousa",
+        "president" : "Joseph DaGrosa",
+        "creation" : "1881"
+        },
+        {
+        "name" : "Stade Brestois 29",
+        "imageURL" : "https://cdn.bein.net/fr/wp-content/uploads/2019/07/Logo-Stade-Brestois-29.png",
+        "stadium" : "Stade Francis-Le Blé",
+        "coach" : "Olivier Dall'Oglio",
+        "president" : "Denis Le Saint",
+        "creation" : "1950"
+        },
+        {
+        "name" : "Dijon FCO",
+        "imageURL" : "https://cdn.bein.net/fr/wp-content/uploads/2019/07/Logo-Dijon-FCO-949x1024.png",
+        "stadium" : "Stade Gaston Gérard",
+        "coach" : "Stéphane Jobard",
+        "president" : "Olivier Delcourt",
+        "creation" : "1936"
+        },
+        {
+        "name" : "Lille OSC",
+        "imageURL" : "https://cdn.bein.net/fr/wp-content/uploads/2019/07/Logo-LOSC-Lille.png",
+        "stadium" : "Stade Pierre-Mauroy",
+        "coach" : "Christophe Galtier",
+        "president" : "Michel Seydoux",
+        "creation" : "1944"
+        },
+        {
+        "name" : "Olympique Lyonnais",
+        "imageURL" : "https://cdn.bein.net/fr/wp-content/uploads/2019/07/Logo-Olympique-Lyonnais.png",
+        "stadium" : "Parc OL",
+        "coach" : "Rudi Garcia",
+        "president" : "Jean-Michel Aulas",
+        "creation" : "1950"
+        },
+        {
+        "name" : "Olympique de Marseille",
+        "imageURL" : "https://cdn.bein.net/fr/wp-content/uploads/2019/07/Logo-Olympique-de-Marseille.png",
+        "stadium" : "Stade Vélodrome",
+        "coach" : "André Villas-Boas",
+        "president" : "Jacques-Henri Eyraud",
+        "creation" : "1899"
+        },
+        {
+        "name" : "Metz FC",
+        "imageURL" : "https://cdn.bein.net/fr/wp-content/uploads/2019/07/Logo-FC-Metz-857x1024.png",
+        "stadium" : "Stade Saint-Symphorien",
+        "coach" : "Vincent Hognon",
+        "president" : "Bernard Serin",
+        "creation" : "1932"
+        },
+        {
+        "name" : "Monaco AS",
+        "imageURL" : "https://cdn.bein.net/fr/wp-content/uploads/2019/07/Logo-AS-Monaco-768x1337.png",
+        "stadium" : "Stade Louis II",
+        "coach" : "Robert Moreno",
+        "president" : "Dmitri Rybolovlev",
+        "creation" : "1919"
+        },
+        {
+        "name" : "Montpellier HSC",
+        "imageURL" : "https://cdn.bein.net/fr/wp-content/uploads/2019/07/Logo-Montpellier-Hérault-SC.png",
+        "stadium" : "Stade de la Mosson",
+        "coach" : "Michel der Zakarian",
+        "president" : "Laurent Nicollin",
+        "creation" : "1974"
+        },
+        {
+        "name" : "Nantes FC",
+        "imageURL" : "https://cdn.bein.net/fr/wp-content/uploads/2019/07/Logo-FC-Nantes-776x1024.png",
+        "stadium" : "Stade de la Beaujoire",
+        "coach" : "Christian Gourcuff",
+        "president" : "Waldemar Kita",
+        "creation" : "1943"
+        },
+        {
+        "name" : "Nice OGC",
+        "imageURL" : "https://cdn.bein.net/fr/wp-content/uploads/2019/07/Logo-OGC-Nice.png",
+        "stadium" : "Allianz Riviera",
+        "coach" : "Patrick Vieira",
+        "president" : "Jean-Pierre Rivière",
+        "creation" : "1904"
+        },
+        {
+        "name" : "Nîmes Olympique",
+        "imageURL" : "https://cdn.bein.net/fr/wp-content/uploads/2015/07/N%C3%AEmes_Olympique_logo_2018.png",
+        "stadium" : "Stade des Costières",
+        "coach" : "Bernard Blaquart",
+        "president" : "Rani Assaf",
+        "creation" : "1937"
+        },
+        {
+        "name" : "Paris SG",
+        "imageURL" : "https://cdn.bein.net/fr/wp-content/uploads/2016/08/PSG.png",
+        "stadium" : "Parc des Princes",
+        "coach" : "Thomas Tuchel",
+        "president" : "Nasser al-Khelaïfi",
+        "creation" : "1970"
+        },
+        {
+        "name" : "Stade de Reims",
+        "imageURL" : "https://cdn.bein.net/fr/wp-content/uploads/2019/07/Logo-Stade-de-Reims-1024x1024.png",
+        "stadium" : "Stade Auguste Delaune",
+        "coach" : "David Guillon",
+        "president" : "Jean-Pierre Caillot",
+        "creation" : "1909"
+        },
+        {
+        "name" : "Stade Rennais FC",
+        "imageURL" : "https://cdn.bein.net/fr/wp-content/uploads/2019/07/Logo-Stade-Rennais-FC.png",
+        "stadium" : "Roazhon Park",
+        "coach" : "Julien Stéphan",
+        "president" : "Olivier Létang",
+        "creation" : "1901"
+        },
+        {
+        "name" : "Saint-Etienne AS",
+        "imageURL" : "https://cdn.bein.net/fr/wp-content/uploads/2019/07/Logo-AS-Saint-Etienne.png",
+        "stadium" : "Stade Geoffroy-Guichard",
+        "coach" : "Claude Puel",
+        "president" : "Roland Romeyer",
+        "creation" : "1920"
+        },
+        {
+        "name" : "Strasbourg RC",
+        "imageURL" : "https://cdn.bein.net/fr/wp-content/uploads/2019/07/Logo-RC-Strasbourg.png",
+        "stadium" : "Stade de la Meinau",
+        "coach" : "Thierry Laurey",
+        "president" : "Marc Keller",
+        "creation" : "1906"
+        },
+        {
+        "name" : "Toulouse FC",
+        "imageURL" : "https://cdn.bein.net/fr/wp-content/uploads/2019/07/Logo-Toulouse-FC-1024x1024.png",
+        "stadium" : "Stadium Municipal",
+        "coach" : "Denis Zanko",
+        "president" : "Olivier Sadran",
+        "creation" : "1937"
+        }
+        ]
