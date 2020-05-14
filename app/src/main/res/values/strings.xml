@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">AppMobileFoot</string>
+    <string name="player_button">Player</string>
+    <string name="club_button">Club</string>
+    <string name="app_text"> Application  Football  L1</string>
+    <string name="todo">TODO</string>
+    <string name="saison_2019_2020">Saison 2019/2020</string>
+    <string name="description">Description</string>
+    <string name="nom">Nom</string>
 </resources>
