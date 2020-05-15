@@ -8,15 +8,21 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.appmobilefoot.R;
+import com.example.appmobilefoot.presentation.controller.MainController;
 
 public class MainActivity extends AppCompatActivity {
 
     private Button button_club,button_player;
 
+    private MainController mainController;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mainController = new MainController();
+        mainController.onStart();
 
         button_club = findViewById(R.id.club_button);
         button_club.setOnClickListener(new View.OnClickListener() {
