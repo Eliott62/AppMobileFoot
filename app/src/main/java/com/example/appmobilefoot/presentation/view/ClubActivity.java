@@ -33,8 +33,8 @@ public class ClubActivity extends AppCompatActivity {
         clubController = new ClubController(
                 this,
                 new GsonBuilder()
-                .setLenient()
-                .create(),
+                    .setLenient()
+                    .create(),
                 getSharedPreferences("Club", Context.MODE_PRIVATE)
 
         );

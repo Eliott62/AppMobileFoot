@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.widget.Toast;
 
 import com.example.appmobilefoot.Constants;
+import com.example.appmobilefoot.Singletons;
 import com.example.appmobilefoot.data.ClubAPI;
 import com.example.appmobilefoot.presentation.model.Club;
 import com.example.appmobilefoot.presentation.view.ClubActivity;
@@ -42,15 +43,7 @@ public class ClubController {
     }
 
     private void makeAPICall(){
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(Constants.BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create(gson))
-                .build();
-
-        ClubAPI clubApi = retrofit.create(ClubAPI.class);
-
-        Call<List<Club>> call = clubApi.getClub();
-
+        Call<List<Club>> call = Singletons.getClubApi().getClub();
         call.enqueue(new Callback<List<Club>>() {
             @Override
             public void onResponse(Call<List<Club>> call, Response<List<Club>> response) {

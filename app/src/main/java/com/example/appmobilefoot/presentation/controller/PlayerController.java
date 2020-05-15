@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.widget.Toast;
 
 import com.example.appmobilefoot.Constants;
+import com.example.appmobilefoot.Singletons;
 import com.example.appmobilefoot.data.PlayerAPI;
 import com.example.appmobilefoot.presentation.model.Player;
 import com.example.appmobilefoot.presentation.view.PlayerActivity;
@@ -42,15 +43,7 @@ public class PlayerController {
     }
 
     private void makeAPICall(){
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(Constants.BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create(gson))
-                .build();
-
-        PlayerAPI playerApi = retrofit.create(PlayerAPI.class);
-
-        Call<List<Player>> call = playerApi.getPlayer();
-
+        Call<List<Player>> call = Singletons.getPlayerApi().getPlayer();
         call.enqueue(new Callback<List<Player>>() {
             @Override
             public void onResponse(Call<List<Player>> call, Response<List<Player>> response) {
