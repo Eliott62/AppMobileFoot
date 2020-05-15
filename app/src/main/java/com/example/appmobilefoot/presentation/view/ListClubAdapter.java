@@ -1,4 +1,4 @@
-package com.example.appmobilefoot;
+package com.example.appmobilefoot.presentation.view;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,6 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.appmobilefoot.R;
+import com.example.appmobilefoot.presentation.model.Club;
 
 import java.util.List;
 

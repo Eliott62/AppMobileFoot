@@ -1,4 +1,4 @@
-package com.example.appmobilefoot;
+package com.example.appmobilefoot.presentation.model;
 
 public class Player {
 
@@ -25,11 +25,11 @@ public class Player {
         return nationality;
     }
 
-    String getClub() {
+    public String getClub() {
         return club;
     }
 
-    String getImageURL() {
+    public String getImageURL() {
         return imageURL;
     }
 }

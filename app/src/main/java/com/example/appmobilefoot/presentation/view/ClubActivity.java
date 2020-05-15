@@ -1,4 +1,4 @@
-package com.example.appmobilefoot;
+package com.example.appmobilefoot.presentation.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -10,12 +10,14 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.example.appmobilefoot.data.ClubAPI;
+import com.example.appmobilefoot.R;
+import com.example.appmobilefoot.presentation.model.Club;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
-import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -24,10 +26,10 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class PlayerActivity extends AppCompatActivity {
+public class ClubActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
-    private ListPlayerAdapter mAdapter;
+    private ListClubAdapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
 
     private final String BASE_URL = "https://raw.githubusercontent.com/Eliott62/AppMobileFoot/master/app/src/main/java/com/example/appmobilefoot/";
@@ -35,18 +37,18 @@ public class PlayerActivity extends AppCompatActivity {
 
     private SharedPreferences s;
     private Gson gson;
-    private List<Player> list;
+    private List<Club> list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_player);
+        setContentView(R.layout.activity_club);
 
         gson = new GsonBuilder().setLenient().create();
-        s = getSharedPreferences("Player", Context.MODE_PRIVATE);
+        s = getSharedPreferences("Club", Context.MODE_PRIVATE);
 
 
-        List<Player> liste = cache();
+        List<Club> liste = cache();
         if(liste != null){
             showList(liste);
         }else{
@@ -54,14 +56,14 @@ public class PlayerActivity extends AppCompatActivity {
         }
     }
 
-    private void showList(List<Player> liste) {
+    private void showList(List<Club> liste) {
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
 
-        mAdapter = new ListPlayerAdapter(liste,getApplicationContext());
+        mAdapter = new ListClubAdapter(liste,getApplicationContext());
         recyclerView.setAdapter(mAdapter);
     }
 
@@ -72,42 +74,42 @@ public class PlayerActivity extends AppCompatActivity {
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
 
-        PlayerAPI playerApi = retrofit.create(PlayerAPI.class);
+        ClubAPI clubApi = retrofit.create(ClubAPI.class);
 
-        Call<List<Player>> call = playerApi.getPlayer();
+        Call<List<Club>> call = clubApi.getClub();
 
-        call.enqueue(new Callback<List<Player>>() {
-            @Override
-            public void onResponse(Call<List<Player>> call, Response<List<Player>> response) {
-                list = response.body();
-                saveList(list);
-                showList(list);
-                Toast.makeText(getApplicationContext(), "API success", Toast.LENGTH_SHORT).show();
-            }
+      call.enqueue(new Callback<List<Club>>() {
+          @Override
+          public void onResponse(Call<List<Club>> call, Response<List<Club>> response) {
+              list = response.body();
+              saveList(list);
+              showList(list);
+              Toast.makeText(getApplicationContext(), "API success", Toast.LENGTH_SHORT).show();
+          }
 
-            @Override
-            public void onFailure(Call<List<Player>> call, Throwable t) {
+          @Override
+          public void onFailure(Call<List<Club>> call, Throwable t) {
                 showError();
-            }
-        });
+          }
+      });
 
 
 
     }
 
-    private void saveList(List<Player> list){
+    private void saveList(List<Club> list){
         String jsonString  = gson.toJson(list);
         s.edit().putString("jsonString",jsonString).apply();
     }
 
-    private List<Player> cache(){
+    private List<Club> cache(){
 
-        String jsonPlayer = s.getString("jsonString",null);
-        if(jsonPlayer == null){
+        String jsonClub = s.getString("jsonString",null);
+        if(jsonClub == null){
             return null;
         }else{
-            Type listeType = new TypeToken<List<Player>>(){}.getType();
-            return gson.fromJson(jsonPlayer,listeType);
+            Type listeType = new TypeToken<List<Club>>(){}.getType();
+            return gson.fromJson(jsonClub,listeType);
         }
     }
 
@@ -116,4 +118,3 @@ public class PlayerActivity extends AppCompatActivity {
     }
 
 }
-

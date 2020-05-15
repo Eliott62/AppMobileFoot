@@ -1,4 +1,4 @@
-package com.example.appmobilefoot;
+package com.example.appmobilefoot.presentation.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.example.appmobilefoot.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         button_club.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent clubIntent = new Intent(getApplicationContext(),ClubActivity.class);
+                Intent clubIntent = new Intent(getApplicationContext(), ClubActivity.class);
                 startActivity(clubIntent);
                 finish();
             }
@@ -30,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         button_player.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent playerIntent = new Intent(getApplicationContext(),PlayerActivity.class);
+                Intent playerIntent = new Intent(getApplicationContext(), PlayerActivity.class);
                 startActivity(playerIntent);
                 finish();
             }

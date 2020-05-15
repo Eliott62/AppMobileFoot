@@ -1,4 +1,6 @@
-package com.example.appmobilefoot;
+package com.example.appmobilefoot.data;
+
+import com.example.appmobilefoot.presentation.model.Player;
 
 import java.util.List;
 
