@@ -1,7 +1,6 @@
 package com.example.appmobilefoot.presentation.view;
 
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -12,7 +11,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.appmobilefoot.R;
 import com.example.appmobilefoot.presentation.controller.ClubController;
 import com.example.appmobilefoot.presentation.model.Club;
-import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import java.util.List;
@@ -48,7 +46,12 @@ public class ClubActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
 
 
-        mAdapter = new ListClubAdapter(liste,getApplicationContext());
+        mAdapter = new ListClubAdapter(liste,getApplicationContext(), new ListClubAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(Club item) {
+                clubController.onItemClick(item);
+            }
+        });
         recyclerView.setAdapter(mAdapter);
     }
 
@@ -56,4 +59,7 @@ public class ClubActivity extends AppCompatActivity {
         Toast.makeText(getApplicationContext(), "API Error", Toast.LENGTH_SHORT).show();
     }
 
+    public void navigateToDetails(Club club) {
+        Toast.makeText(getApplicationContext(), "To Do Navigate", Toast.LENGTH_SHORT).show();
+    }
 }

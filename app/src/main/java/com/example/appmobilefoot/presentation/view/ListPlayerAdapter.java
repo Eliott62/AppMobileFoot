@@ -21,6 +21,11 @@ public class ListPlayerAdapter extends RecyclerView.Adapter<ListPlayerAdapter.Vi
     private Context mContext;
     private ImageView imageView;
 
+    private OnItemClickListener listener;
+
+    public interface OnItemClickListener {
+        void onItemClick(Player item);
+    }
 
     class ViewHolder extends RecyclerView.ViewHolder {
 
@@ -37,13 +42,11 @@ public class ListPlayerAdapter extends RecyclerView.Adapter<ListPlayerAdapter.Vi
         }
     }
 
-
-
-    ListPlayerAdapter(List<Player> myDataset, Context context) {
-        values = myDataset;
-        mContext = context;
+    ListPlayerAdapter(List<Player> myDataset, Context context, OnItemClickListener listener) {
+        this.values = myDataset;
+        this.mContext = context;
+        this.listener = listener;
     }
-
 
     @NonNull
     public ListPlayerAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -57,11 +60,17 @@ public class ListPlayerAdapter extends RecyclerView.Adapter<ListPlayerAdapter.Vi
 
     @Override
     public void onBindViewHolder(ListPlayerAdapter.ViewHolder holder, final int position) {
-        final Player name = values.get(position);
-        holder.txtHeader.setText(name.getName());
-        holder.txtFooter.setText(name.getClub());
+        final Player currentPlayer = values.get(position);
+        holder.txtHeader.setText(currentPlayer.getName());
+        holder.txtFooter.setText(currentPlayer.getClub());
 
         Glide.with(mContext).load(values.get(position).getImageURL()).fitCenter().into(imageView);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                listener.onItemClick(currentPlayer);
+            }
+        });
     }
 
     public int getItemCount() {

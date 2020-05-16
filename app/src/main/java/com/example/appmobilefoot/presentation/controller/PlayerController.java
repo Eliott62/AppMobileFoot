@@ -79,5 +79,6 @@ public class PlayerController {
     }
 
     public void onItemClick(Player player){
+        view.navigateToDetails(player);
     }
 }

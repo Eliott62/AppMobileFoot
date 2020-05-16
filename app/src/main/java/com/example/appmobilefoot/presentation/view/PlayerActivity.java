@@ -49,8 +49,12 @@ public class PlayerActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-
-        mAdapter = new ListPlayerAdapter(liste,getApplicationContext());
+        mAdapter = new ListPlayerAdapter(liste,getApplicationContext(), new ListPlayerAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(Player item) {
+                playerController.onItemClick(item);
+            }
+        });
         recyclerView.setAdapter(mAdapter);
     }
 
@@ -58,5 +62,8 @@ public class PlayerActivity extends AppCompatActivity {
         Toast.makeText(getApplicationContext(), "API Error", Toast.LENGTH_SHORT).show();
     }
 
+    public void navigateToDetails(Player player) {
+        Toast.makeText(getApplicationContext(), "To Do Navigate", Toast.LENGTH_SHORT).show();
+    }
 }
 

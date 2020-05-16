@@ -27,27 +27,27 @@ public class ClubController {
     private Gson gson;
     private ClubActivity view;
 
-    public ClubController(ClubActivity clubActivity,Gson gson, SharedPreferences sharedPreferences) {
+    public ClubController(ClubActivity clubActivity, Gson gson, SharedPreferences sharedPreferences) {
         this.view = clubActivity;
         this.gson = gson;
         this.sharedPreferences = sharedPreferences;
     }
 
-    public void onStart(){
+    public void onStart() {
         List<Club> listClub = cache();
-        if(listClub != null){
+        if (listClub != null) {
             view.showList(listClub);
-        }else {
+        } else {
             makeAPICall();
         }
     }
 
-    private void makeAPICall(){
+    private void makeAPICall() {
         Call<List<Club>> call = Singletons.getClubApi().getClub();
         call.enqueue(new Callback<List<Club>>() {
             @Override
             public void onResponse(Call<List<Club>> call, Response<List<Club>> response) {
-                if(response.isSuccessful() && response.body() != null) {
+                if (response.isSuccessful() && response.body() != null) {
                     List<Club> clubList = response.body();
                     saveList(clubList);
                     view.showList(clubList);
@@ -63,21 +63,24 @@ public class ClubController {
         });
     }
 
-    private void saveList(List<Club> list){
-        String jsonString  = gson.toJson(list);
-        sharedPreferences.edit().putString("jsonString",jsonString).apply();
+    private void saveList(List<Club> list) {
+        String jsonString = gson.toJson(list);
+        sharedPreferences.edit().putString("jsonString", jsonString).apply();
     }
 
-    private List<Club> cache(){
-        String jsonClub = sharedPreferences.getString("jsonString",null);
-        if(jsonClub == null){
+    private List<Club> cache() {
+        String jsonClub = sharedPreferences.getString("jsonString", null);
+        if (jsonClub == null) {
             return null;
-        }else{
-            Type listeType = new TypeToken<List<Club>>(){}.getType();
-            return gson.fromJson(jsonClub,listeType);
+        } else {
+            Type listeType = new TypeToken<List<Club>>() {
+            }.getType();
+            return gson.fromJson(jsonClub, listeType);
         }
     }
 
-    public void onItemClick(Club club){
+    public void onItemClick(Club club) {
+        view.navigateToDetails(club);
     }
 }
+

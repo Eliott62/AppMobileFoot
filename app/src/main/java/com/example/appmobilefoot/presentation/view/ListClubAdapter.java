@@ -21,6 +21,11 @@ public class ListClubAdapter extends RecyclerView.Adapter<ListClubAdapter.ViewHo
     private Context mContext;
     private ImageView imageView;
 
+    private OnItemClickListener listener;
+
+    public interface OnItemClickListener {
+        void onItemClick(Club item);
+    }
 
     class ViewHolder extends RecyclerView.ViewHolder {
 
@@ -37,13 +42,11 @@ public class ListClubAdapter extends RecyclerView.Adapter<ListClubAdapter.ViewHo
         }
     }
 
-
-
-    public ListClubAdapter(List<Club> myDataset,Context context) {
-        values = myDataset;
-        mContext = context;
+    public ListClubAdapter(List<Club> myDataset, Context context, OnItemClickListener listener) {
+        this.values = myDataset;
+        this.mContext = context;
+        this.listener = listener;
     }
-
 
     @NonNull
     @Override
@@ -60,17 +63,22 @@ public class ListClubAdapter extends RecyclerView.Adapter<ListClubAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
-        final Club name = values.get(position);
-        holder.txtHeader.setText(name.getName());
-        holder.txtFooter.setText(name.getStadium());
+        final Club currentClub = values.get(position);
+        holder.txtHeader.setText(currentClub.getName());
+        holder.txtFooter.setText(currentClub.getStadium());
 
         Glide.with(mContext).load(values.get(position).getImageURL()).fitCenter().into(imageView);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                listener.onItemClick(currentClub);
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
         return values.size();
     }
-
 }
 
