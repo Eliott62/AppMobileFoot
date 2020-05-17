@@ -7,6 +7,12 @@
     <string name="saison_2019_2020">Saison 2019/2020</string>
     <string name="description">Description</string>
     <string name="nom">Nom</string>
-    <string name="player_detail">Player Detail</string>
-    <string name="club_detail">Club Details</string>
+    <string name="player_name">Nom du joueur</string>
+    <string name="player_club">Club</string>
+    <string name="player_position">Position</string>
+    <string name="player_nationality">Nationalité</string>
+    <string name="club_stadium">Stadium</string>
+    <string name="club_coach">Coach</string>
+    <string name="club_president">President</string>
+    <string name="club_creation">Date</string>
 </resources>

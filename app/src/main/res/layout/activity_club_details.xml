@@ -7,10 +7,77 @@
     tools:context=".presentation.view.ClubDetailsActivity">
 
     <TextView
-        android:id="@+id/detail_club_text"
+        android:id="@+id/club_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/club_detail"
-        tools:ignore="MissingConstraints" />
+        android:text="@string/nom"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="10dp"
+        />
+
+    <ImageView
+        android:id="@+id/club_photo"
+        android:layout_width="256dp"
+        android:layout_height="273dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/club_name"
+        app:layout_constraintVertical_bias="0.101"
+        />
+
+    <TextView
+        android:id="@+id/stadium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/club_stadium"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/club_photo"
+        />
+
+    <TextView
+        android:id="@+id/club_coach"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/club_coach"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stadium"
+        />
+
+    <TextView
+        android:id="@+id/club_president"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/club_president"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/club_coach"
+        />
+
+    <TextView
+        android:id="@+id/club_creation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/club_creation"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/club_president"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

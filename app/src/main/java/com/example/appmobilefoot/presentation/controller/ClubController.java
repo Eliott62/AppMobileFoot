@@ -1,16 +1,11 @@
 package com.example.appmobilefoot.presentation.controller;
 
-import android.content.Context;
 import android.content.SharedPreferences;
-import android.widget.Toast;
 
-import com.example.appmobilefoot.Constants;
 import com.example.appmobilefoot.Singletons;
-import com.example.appmobilefoot.data.ClubAPI;
 import com.example.appmobilefoot.presentation.model.Club;
 import com.example.appmobilefoot.presentation.view.ClubActivity;
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
@@ -19,8 +14,6 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ClubController {
     private SharedPreferences sharedPreferences;

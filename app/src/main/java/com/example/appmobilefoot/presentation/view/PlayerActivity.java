@@ -67,7 +67,8 @@ public class PlayerActivity extends AppCompatActivity {
     public void navigateToDetails(Player player) {
         Intent playerIntent = new Intent(PlayerActivity.this, PlayerDetailsActivity.class);
 
-        playerIntent.putExtra("playerKey", Singletons.getGson().toJson(player));
+        playerIntent.putExtra("playerNameKey", Singletons.getGson().toJson(player));
+        playerIntent.putExtra("playerPhotoKey", Singletons.getGson().toJson(player));
 
         PlayerActivity.this.startActivity(playerIntent);
     }
