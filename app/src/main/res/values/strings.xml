@@ -7,4 +7,6 @@
     <string name="saison_2019_2020">Saison 2019/2020</string>
     <string name="description">Description</string>
     <string name="nom">Nom</string>
+    <string name="player_detail">Player Detail</string>
+    <string name="club_detail">Club Details</string>
 </resources>

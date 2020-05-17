@@ -1,6 +1,7 @@
 package com.example.appmobilefoot.presentation.view;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -9,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.appmobilefoot.R;
+import com.example.appmobilefoot.Singletons;
 import com.example.appmobilefoot.presentation.controller.ClubController;
 import com.example.appmobilefoot.presentation.model.Club;
 import com.google.gson.GsonBuilder;
@@ -60,6 +62,10 @@ public class ClubActivity extends AppCompatActivity {
     }
 
     public void navigateToDetails(Club club) {
-        Toast.makeText(getApplicationContext(), "To Do Navigate", Toast.LENGTH_SHORT).show();
+        Intent clubIntent = new Intent(ClubActivity.this, ClubDetailsActivity.class);
+
+        clubIntent.putExtra("clubKey", Singletons.getGson().toJson(club));
+
+        ClubActivity.this.startActivity(clubIntent);
     }
 }

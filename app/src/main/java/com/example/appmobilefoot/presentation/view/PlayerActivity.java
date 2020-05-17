@@ -1,6 +1,7 @@
 package com.example.appmobilefoot.presentation.view;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Toast;
@@ -10,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.appmobilefoot.R;
+import com.example.appmobilefoot.Singletons;
 import com.example.appmobilefoot.presentation.controller.PlayerController;
 import com.example.appmobilefoot.presentation.model.Player;
 import com.google.gson.Gson;
@@ -63,7 +65,11 @@ public class PlayerActivity extends AppCompatActivity {
     }
 
     public void navigateToDetails(Player player) {
-        Toast.makeText(getApplicationContext(), "To Do Navigate", Toast.LENGTH_SHORT).show();
+        Intent playerIntent = new Intent(PlayerActivity.this, PlayerDetailsActivity.class);
+
+        playerIntent.putExtra("playerKey", Singletons.getGson().toJson(player));
+
+        PlayerActivity.this.startActivity(playerIntent);
     }
 }
 
