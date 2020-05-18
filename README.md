@@ -33,6 +33,6 @@ Lorsque l'on clique sur un joueur, des détails apparaîssent ( exemple avec Kyl
 Lorsque l'on appuie sur le bouton "Classement",un récapitulatif de la saison apparaît :
 ![classement](https://github.com/Eliott62/AppMobileFoot/blob/master/images_readme/classement.png)
 
-##Auteur :
+## Auteur :
 Eliott BERNARDOU
 
