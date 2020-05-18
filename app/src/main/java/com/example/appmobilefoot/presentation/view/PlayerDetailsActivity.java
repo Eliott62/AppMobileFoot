@@ -31,7 +31,6 @@ public class PlayerDetailsActivity extends AppCompatActivity {
         playerNationality = findViewById(R.id.player_nationality);
 
         Intent playerIntent = getIntent();
-        image = getIntent().getStringExtra("imageURL");
 
         String playerJson = playerIntent.getStringExtra("playerNameKey");
         Player player = Singletons.getGson().fromJson(playerJson, Player.class);
@@ -42,7 +41,7 @@ public class PlayerDetailsActivity extends AppCompatActivity {
     @SuppressLint("SetTextI18n")
     private void showDetail(Player player) {
         playerName.setText(player.getSurname() + " " +player.getName());
-        Glide.with(this).load(image).into(playerPhoto);
+        Glide.with(this).load(player.getImageURL()).into(playerPhoto);
         playerClub.setText("Club du joueur : " + player.getClub());
         playerPosition.setText("Position du joueur : " + player.getPosition());
         playerNationality.setText("Pays du joueur : " + player.getNationality());
