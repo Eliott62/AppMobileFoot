@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.view.ClassementActivity">
+
+    <TextView
+        android:id="@+id/classement_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/classement_text"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/classement_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/classement_text"
+        app:srcCompat="@drawable/classement_ligue_one"
+        android:contentDescription="@string/todo" />
+
+    <TextView
+        android:id="@+id/champion_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/champion_text"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/classement_image" />
+
+    <TextView
+        android:id="@+id/relegues_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/relegues_text"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/champion_text" />
+
+    <TextView
+        android:id="@+id/promus_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/promu_text"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/relegues_text" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

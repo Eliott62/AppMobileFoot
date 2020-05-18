@@ -15,4 +15,9 @@
     <string name="club_coach">Coach</string>
     <string name="club_president">President</string>
     <string name="club_creation">Date</string>
+    <string name="classement_button">Classement</string>
+    <string name="classement_text">Classement final de la saison 2019/2020 :</string>
+    <string name="champion_text">Champion : Paris SG.</string>
+    <string name="relegues_text"><![CDATA[Relégués : Amiens SC & Toulouse FC.]]></string>
+    <string name="promu_text"><![CDATA[Promus : Lorient FC & Lens RC.]]></string>
 </resources>

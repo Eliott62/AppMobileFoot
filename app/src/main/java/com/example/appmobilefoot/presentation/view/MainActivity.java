@@ -12,7 +12,7 @@ import com.example.appmobilefoot.presentation.controller.MainController;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button button_club,button_player;
+    private Button button_club,button_player, button_classement;
 
     private MainController mainController;
 
@@ -40,6 +40,16 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent playerIntent = new Intent(getApplicationContext(), PlayerActivity.class);
                 startActivity(playerIntent);
+                finish();
+            }
+        });
+
+        button_classement = findViewById(R.id.classement_button);
+        button_classement.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent classementIntent = new Intent(getApplicationContext(), ClassementActivity.class);
+                startActivity(classementIntent);
                 finish();
             }
         });

@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".presentation.view.ClassementActivity"></activity>
         <activity android:name=".presentation.view.ClubDetailsActivity" />
         <activity android:name=".presentation.view.PlayerDetailsActivity" />
         <activity android:name=".presentation.view.ClubActivity" />
